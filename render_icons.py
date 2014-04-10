@@ -7,7 +7,7 @@ import KeyValue
 
 fill_blue = "#1f496f"
 fill_green = "#26721b"
-font = ImageFont.truetype('TitilliumWeb-Regular.ttf', 13)
+font = ImageFont.truetype('Exo-SemiBold.ttf', 13)
 src_image_path = "./src/items/"
 out_image_path = "./items/"
 
@@ -72,7 +72,7 @@ for key in items:
     # add info in the bottom left corner
     d = ImageDraw.Draw(img)
     d.polygon([(0,50),(20,50),(25,64),(0,64)], fill=color)
-    d.text((text_pos_padding,46), cost, font=font,fill="#ffffff")
+    d.text((text_pos_padding,48), cost, font=font,fill="#ffffff")
     del d
 
     # save the image in the ouput directory
