@@ -7,19 +7,21 @@ The images are made by Reddit user **/u/lerobotsexy**, who also originally came 
 
 This repo contains a bunch of script that will automatically generate the icon images.
 
-## Download
+## Installation
 
-https://github.com/rossengeorgiev/dota2mod_manacost/releases
+1. Download the latest `release.zip` from the [release section](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
+2. Extract in `[steam folder]\steamapps\common\dota 2 beta\dota\resource\flash3\images`
+3. Add `-override_vpk` to Dota 2 launch options
 
 ## Building
 ### Required tools
 * HLExtract `Windows x86/x64` `Included`
-* Pathon w/ Imaging library
+* Python w/ Imaging library
 * `optional` bash
-* `optional`  zip
+* `optional` zip
 
 ### Steps
 1. Make sure the correct path is set in `fetch_src_files.bat`
-2. Run `fetch_src_files.bat`, which will all item images and items.txt schema in `./src/`
-3. Run `render_icons.py`, will find all items that have mana/health cost, render the new files and then place them in `./items/`
+2. Run `fetch_src_files.bat`, which will get all item images and items.txt schema in `./src/`
+3. Run `render_icons.py`, renders the new images with their health/mana cost to `./items/`
 4. `optional` Create a release zip file with `build_release.sh`
