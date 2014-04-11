@@ -1,5 +1,7 @@
 # Dota 2 Mod - Mana cost for items
 
+![Icons showcase](showcase.png "Icons showcase")
+
 This mod adds mana/health cost to the icons of in-game items.
 E.g. Soul Ring, TP, Refresher Orb, etc.
 There are also additional modification to upgradeable items and Power threads, indicating their level or the next stat.
