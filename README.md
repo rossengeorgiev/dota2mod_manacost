@@ -5,9 +5,11 @@
 This mod adds mana/health cost to the icons of in-game items.
 E.g. Soul Ring, TP, Refresher Orb, etc.
 There are also additional modification to upgradeable items and Power threads, indicating their level or the next stat.
-The images are made by Reddit user **/u/lerobotsexy**, who also originally came up with the idea for this mod.
 
-This repo contains a bunch of script that will automatically generate the icon images.
+The prerendered image modifications are made by Reddit user **/u/lerobotsexy**, who also originally came up with the idea for this mod.
+
+This repo contains a bunch of scripts to automatically generate the images based on data included with the game.
+This way the set can quickly be regenrated in a case of a game patch.
 
 ## Installation
 
