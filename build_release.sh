@@ -2,7 +2,7 @@
 
 echo -e "\nAdd prerendered images..."
 
-cp -v ./prerendered_items/* ./items/
+cp -vn ./prerendered_items/* ./items/
 
 echo -e "\nMake a zip file..."
 

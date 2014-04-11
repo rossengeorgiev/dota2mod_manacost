@@ -9,6 +9,7 @@ fill_blue = "#1f496f"
 fill_green = "#26721b"
 font = ImageFont.truetype('Exo-SemiBold.ttf', 13)
 src_image_path = "./src/items/"
+presrc_image_path = "./prerendered_items/"
 out_image_path = "./items/"
 
 # clear output directory
@@ -67,7 +68,10 @@ for key in items:
     filename = key[5:]
 
     # open image
-    img = Image.open(src_image_path + filename + ".png")
+    if os.path.exists(os.path.join(presrc_image_path, "%s.png" % filename)):
+        img = Image.open(os.path.join(presrc_image_path, "%s.png" % filename))
+    else:
+        img = Image.open(os.path.join(src_image_path, "%s.png" % filename))
 
     # add info in the bottom left corner
     d = ImageDraw.Draw(img)
@@ -76,4 +80,4 @@ for key in items:
     del d
 
     # save the image in the ouput directory
-    img.save(out_image_path + filename + ".png")
+    img.save(os.path.join(out_image_path, "%s.png" % filename))
