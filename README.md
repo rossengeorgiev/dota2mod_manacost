@@ -26,6 +26,6 @@ This way the set can quickly be regenrated in a case of a game patch.
 
 ### Steps
 1. Make sure the correct path is set in `fetch_src_files.bat`
-2. Run `fetch_src_files.bat`, which will get all item images and items.txt schema in `./src/`
-3. Run `render_icons.py`, renders the new images with their health/mana cost to `./items/`
+2. Run `fetch_src_files.bat`. Fetches all item images and the items.txt schema to `./src/`
+3. Run `render_icons.py`. Renders the new images with their health/mana cost to `./items/`
 4. `optional` Create a release zip file with `build_release.sh`
