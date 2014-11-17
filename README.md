@@ -3,13 +3,12 @@
 ![Icons showcase](showcase.png "Icons showcase")
 
 This mod adds mana/health cost to the icons of in-game items.
-E.g. Soul Ring, TP, Refresher Orb, etc.
-There are also additional modification to upgradeable items and Power threads, indicating their level or the next stat.
+There are additional modification to upgradeable items and Power threads, indicating their level or the next stat.
 
-The prerendered image modifications are made by Reddit user **/u/lerobotsexy**, who also originally came up with the idea for this mod.
+The prerendered image modifications were made by Reddit user **/u/lerobotsexy**, who also originally came up with the idea for this mod.
 
-This repo contains a bunch of scripts to automatically generate the images based on data included with the game.
-This way the set can quickly be regenrated in a case of a game patch.
+The repo contains a bunch of scripts to automatically generate the images based on data included with the game.
+This way the icon set can quickly be regenrated in the case of a game patch.
 
 ## Installation
 
@@ -18,6 +17,7 @@ This way the set can quickly be regenrated in a case of a game patch.
 3. Add `-override_vpk` to Dota 2 launch options
 
 ## Building
+
 ### Required tools
 * HLExtract `Windows x86/x64` `Included`
 * Python w/ Imaging library
@@ -29,3 +29,4 @@ This way the set can quickly be regenrated in a case of a game patch.
 2. Run `fetch_src_files.bat`. Fetches all item images and the items.txt schema to `./src/`
 3. Run `render_icons.py`. Renders the new images with their health/mana cost to `./items/`
 4. `optional` Create a release zip file with `build_release.sh`
+
