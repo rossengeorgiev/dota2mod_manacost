@@ -3,7 +3,7 @@
 import Image, ImageFont, ImageDraw
 import sys, os
 sys.path.append("./tools")
-import KeyValue
+import vdf
 
 # configs
 fill_blue = "#1f496f"
@@ -22,7 +22,7 @@ else:
     os.mkdir("./items")
 
 # parse items.txt
-items = KeyValue.parse(open("./src/items.txt"))['DOTAAbilities']
+items = vdf.parse(open("./src/items.txt"))['DOTAAbilities']
 
 # find all items with mana or health requirements
 for item_name in items:
