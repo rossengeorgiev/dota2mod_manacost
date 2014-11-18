@@ -7,9 +7,11 @@ There are additional modification to upgradeable items and Power threads, indica
 
 The prerendered image modifications were made by Reddit user **/u/lerobotsexy**, who also originally came up with the idea for this mod.
 
-**Additional mod adding damage type as color code to ability icons**
+**Additional mod: adding damage type as color code to ability icons**
 
 ![Spellicons showcase](showcase_spellicons.png "Spellicons showcase")
+
+----
 
 The repo contains a bunch of scripts to automatically generate the images based on data included with the game.
 This way the icon set can quickly be regenrated in the case of a game patch.
@@ -25,8 +27,9 @@ This way the icon set can quickly be regenrated in the case of a game patch.
 ### Required tools
 * HLExtract `Windows x86/x64` `Included`
 * Python w/ Imaging library
-* `optional` bash
+* `optional` Linux/Cygwin environment
 * `optional` zip
+* `optional` ImageMagik
 
 ### Steps
 1. Make sure the correct path is set in `fetch_src_files.bat`
