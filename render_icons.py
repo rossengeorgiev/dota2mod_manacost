@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import Image, ImageFont, ImageDraw
-import sys, os
+import sys, os, fnmatch, shutil
 sys.path.append("./tools")
 import vdf
 
@@ -9,17 +9,16 @@ import vdf
 fill_blue = "#1f496f"
 fill_green = "#26721b"
 font = ImageFont.truetype('Exo-SemiBold.ttf', 13)
-src_images_root = "./src/items/"
+src_image_root = "./src/"
 src_preimages_root = "./prerendered_items/"
-out_image_root = "./items/"
+out_image_root = "./out/"
 
 # clear output directory
-if os.path.exists("./items"):
-    for root, dirs, files in os.walk("./items"):
-        for name in files:
-            os.remove(os.path.join(root, name))
-else:
-    os.mkdir("./items")
+if os.path.exists("./out"):
+    shutil.rmtree("./out")
+os.mkdir("./out")
+os.mkdir("./out/items")
+os.mkdir("./out/spellicons")
 
 # parse items.txt
 items = vdf.parse(open("./src/items.txt"))['DOTAAbilities']
@@ -75,7 +74,7 @@ for item_name in items:
     image_src_path = os.path.join(src_preimages_root, filename)
 
     if not os.path.exists(image_src_path):
-        image_src_path = os.path.join(src_images_root, filename)
+        image_src_path = os.path.join(src_image_root, "items", filename)
 
     # open the image
     img = Image.open(image_src_path);
@@ -87,4 +86,44 @@ for item_name in items:
     del d
 
     # save the image in the ouput directory
-    img.save(os.path.join(out_image_root, filename))
+    img.save(os.path.join(out_image_root, "items", filename))
+
+
+# add color coded damage type in the top right corner
+
+# RED physical
+# BLUE magic
+# PURPLE pure
+dmg_type_color = {
+    "DAMAGE_TYPE_PHYSICAL": "#FF0000",
+    "DAMAGE_TYPE_MAGICAL": "#007FFF",
+    "DAMAGE_TYPE_PURE": "#DF00FF",
+}
+
+abilities = vdf.parse(open("./src/npc_abilities.txt"))['DOTAAbilities']
+src_files = os.walk(os.path.join(src_image_root, "spellicons"), topdown=True).next()[2]
+
+for name in abilities:
+
+    if type(abilities[name]) is not dict:
+        continue
+
+    cur = abilities[name]
+
+    if 'AbilityUnitDamageType' not in cur:
+        continue
+    if cur['AbilityUnitDamageType'] not in dmg_type_color:
+        continue
+
+    color = dmg_type_color[cur['AbilityUnitDamageType']]
+
+    for filename in fnmatch.filter(src_files, "%s*" % name):
+        img = Image.open(os.path.join(src_image_root,"spellicons",filename));
+
+        d = ImageDraw.Draw(img)
+        d.polygon([(128-42,0),(128,0),(128,42)], fill="#191C22")
+        d.polygon([(128-38,0),(128,0),(128,38)], fill=color)
+        del d
+
+        # save the image in the ouput directory
+        img.save(os.path.join(out_image_root, "spellicons", filename))

@@ -1,19 +1,23 @@
 #!/bin/bash
 
-echo -e "\nAdd prerendered images..."
+echo -e "\nAdding untouched prerendered images..."
 
-cp -vn ./prerendered_items/* ./items/
+cp -vn ./prerendered_items/* ./out/items/
 
 echo -e "\nMake a zip file..."
 
-rm -f release.zip
-zip -9 release.zip ./items/*
+cd ./out/
+rm -f *.zip
 
-echo -e "\nMake showcase image.."
+zip -r -9 mod_item_manacost.zip ./items
+zip -r -9 mod_spellicons ./spellicons
+
+echo -e "\nMake showcase images.."
 
 cd ./items
-montage -crop 88x64+0+0 `ls` -tile 6 -shadow -geometry "+16+2" -monitor - | convert - -monitor -crop 722x+0+0 ../showcase.png
+montage -crop 88x64+0+0 -resize 75% `ls` -tile 10 -shadow -geometry "+3+2" -monitor - | convert - -monitor -crop 722x+0+0 ../../showcase_items.png
 
-#montage -crop 88x64+0+0 `ls` -tile 6 -geometry "+0+0" -background black -monitor - | convert - -monitor -resize 512x512 ../showcase_512x512.jpg
+cd ../spellicons
+montage -resize 50% `ls|sort -R|head -30` -tile 10 -shadow -geometry "+4+2" -monitor - | convert - -monitor -crop 722x+0+0 ../../showcase_spellicons.png
 
 echo -e "\nFinished"

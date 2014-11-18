@@ -1,2 +1,5 @@
 *.swp
 *.pyc
+src/items
+src/spellicons
+out/
