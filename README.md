@@ -1,4 +1,10 @@
-# Dota 2 Mod - Mana cost for items
+### Dota 2 mod — Mana cost for items
+----
+[▶ Download latest version](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[▶ Issues & suggestions](https://github.com/rossengeorgiev/dota2mod_manacost/issues)
+
+----
 
 ![Item manacost showcase](showcase_items.png "Item manacost showcase")
 
