@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import Image, ImageFont, ImageDraw
+from PIL import Image, ImageFont, ImageDraw
 import sys, os, fnmatch, shutil
 sys.path.append("./tools")
 import vdf
