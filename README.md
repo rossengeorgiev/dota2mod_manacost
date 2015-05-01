@@ -26,7 +26,7 @@ This way the icon set can quickly be regenrated in the case of a game patch.
 
 1. Download the latest `mod_xxxxxxxx.zip` from the [release section](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
 2. Extract in `[steam folder]\steamapps\common\dota 2 beta\dota\resource\flash3\images`
-3. Add `-override_vpk` to Dota 2 launch options
+3. Add `-enable_addons` to Dota 2 launch options
 
 ## Building
 
