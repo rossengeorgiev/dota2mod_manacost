@@ -31,15 +31,13 @@ This way the icon set can quickly be regenrated in the case of a game patch.
 ## Building
 
 ### Required tools
-* HLExtract `Windows x86/x64` `Included`
-* Python w/ Imaging library
-* `optional` Linux/Cygwin environment
+* Python & pip
 * `optional` zip
 * `optional` ImageMagik
 
 ### Steps
-1. Make sure the correct path is set in `fetch_src_files.bat`
-2. Run `fetch_src_files.bat`. Fetches all item images and the items.txt schema to `./src/`
-3. Run `render_icons.py`. Renders the new images with their health/mana cost to `./items/`
-4. `optional` Create a release zip file with `build_release.sh`
+1. `pip install -r requirements.txt`
+2. Set `vpk_path` in `render_icons.py`
+3. `python render_icons.py`. Renders all images to `./out/`
+4. `optional` `build_release.sh` Create zip file releases
 
