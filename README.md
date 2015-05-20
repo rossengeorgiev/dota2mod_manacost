@@ -6,21 +6,31 @@
 
 ----
 
-![Item manacost showcase](showcase_items.png "Item manacost showcase")
+![Item manacost showcase](showcase_items_manacost.png "Item mana cost showcase")
 
 This mod adds mana/health cost to the icons of in-game items.
 There are additional modification to upgradeable items and Power threads, indicating their level or the next stat.
 
 The prerendered image modifications were made by Reddit user **/u/lerobotsexy**, who also originally came up with the idea for this mod.
 
-**Additional mod: adding damage type as color code to ability icons**
+
+#### Item gold cost variant
+
+Adds item gold cost. Useful for quickly estimating networth of enemy heroes. Below is a preview of the combined version.
+
+![Item manacost showcase](showcase_items_combined.png "Item gold cost showcase")
+
+
+#### Ability damage type mod
+
+Color codes the ability damage type in the top right corner. Physical/Magic/Pure are respectively Red/Blue/Purple.
 
 ![Spellicons showcase](showcase_spellicons.png "Spellicons showcase")
 
 ----
 
 The repo contains a bunch of scripts to automatically generate the images based on data included with the game.
-This way the icon set can quickly be regenrated in the case of a game patch.
+This way the icon set can quickly be regenerated in the case of a game patch.
 
 ## Installation
 

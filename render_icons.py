@@ -11,9 +11,10 @@ import vpk
 
 # configs
 vpk_path = '/d/Steam/steamapps/common/dota 2 beta/dota/pak01_dir.vpk'
-vpk_img_root = 'resource/flash3/images/'
+vpk_img_root = 'resource/flash3/images'
 fill_blue = "#1f496f"
 fill_green = "#26721b"
+fill_gold = "#7a4b4e"
 font = ImageFont.truetype('Exo-SemiBold.ttf', 13)
 src_root = "./src/"
 src_preimages_root = "./prerendered_items/"
@@ -31,7 +32,9 @@ def mktree(path):
 # clear output directory
 if os.path.exists("./out"):
     shutil.rmtree("./out")
-mktree("./out/items")
+mktree("./out/manacost/items")
+mktree("./out/goldcost/items")
+mktree("./out/combined/items")
 mktree("./out/spellicons")
 
 # load game asset index
@@ -50,45 +53,11 @@ for item_name in items:
 
     item = items[item_name]
 
-    if 'AbilityManaCost' not in item:
-        continue
-
-    cost = item['AbilityManaCost']
-    color = fill_blue
-
-    # some items require 0 mana, like 'blink dagger' or 'soul ring'
-    if cost == '0':
-        # ok, we look if the items sacrifice health, e.g. soul ring
-        try:
-            for xv in item['AbilitySpecial'].itervalues():
-                if type(xv) is not dict:
-                    continue
-
-                if "health_sacrifice" in xv:
-                    cost = xv['health_sacrifice']
-                    raise Exception
-
-            # if manacost is 0, and item doesn't require health
-            # there is no point rendering an image for that item
-            continue
-        except:
-            color = fill_green  # sacrifice health, health is green, we use green
-
-    # handle items that are upgradable (costs for each level is separated by whitespaces)
-    else:
-        if ' ' in cost:
-            costs = cost.split(' ')
-
-            try:
-                idx = int(item_name[-1]) - 1  # e.g. item_dagon, item_dagon_2, item_dagon_3
-            except:
-                idx = 0
-
-            cost = costs[idx]
-
-    # center text in our little box
-    text_pos_padding = (3 - len(cost)) * 4
     filename = "%s.png" % item_name[5:]  # removes 'item_' prefix
+
+    # skip recipies, since they all sahre the same icon image
+    if filename.startswith("recipe_"):
+        continue
 
     # first we check for an available prerendered src image, and fallback to the ones from Dota 2
     image_src_path = os.path.join(src_preimages_root, filename)
@@ -96,20 +65,87 @@ for item_name in items:
     if os.path.exists(image_src_path):
         image_src_file = open(image_src_path, 'rb')
     else:
-        image_src_file = pak1.get_file(os.path.join(vpk_img_root, "items", filename))
+        image_src_file = pak1.get_file('/'.join([vpk_img_root, "items", filename]))
 
-    # open the image
-    img = Image.open(image_src_file)
+    manacost_img = None
+    color = fill_blue
+    # generate manacost banner
+    if 'AbilityManaCost' in item:
+        manacost = item['AbilityManaCost']
 
-    # add info in the bottom left corner
-    d = ImageDraw.Draw(img)
-    d.polygon([(0, 50), (20, 50), (25, 64), (0, 64)], fill=color)
-    d.text((text_pos_padding, 48), cost, font=font, fill="#ffffff")
+        # some items require 0 mana, like 'blink dagger' or 'soul ring'
+        if manacost == '0':
+            # ok, we look if the items sacrifice health, e.g. soul ring
+            try:
+                for xv in item['AbilitySpecial'].itervalues():
+                    if type(xv) is not dict:
+                        continue
+
+                    if "health_sacrifice" in xv:
+                        manacost = xv['health_sacrifice']
+                        raise Exception
+
+                # if manamanacost is 0, and item doesn't require health
+                # there is no point rendering an image for that item
+                continue
+            except:
+                color = fill_green  # sacrifice health, health is green, we use green
+
+        # handle items that are upgradable (manacosts for each level is separated by whitespaces)
+        else:
+            if ' ' in manacost:
+                manacosts = manacost.split(' ')
+
+                try:
+                    idx = int(item_name[-1]) - 1  # e.g. item_dagon, item_dagon_2, item_dagon_3
+                except:
+                    idx = 0
+
+                manacost = manacosts[idx]
+
+        # center text in our little box
+        text_pos_padding = (3 - len(manacost)) * 4
+
+        # open the image
+        manacost_img = Image.open(image_src_file)
+
+        # add info in the bottom left corner
+        d = ImageDraw.Draw(manacost_img)
+        d.polygon([(0, 50), (20, 50), (25, 64), (0, 64)], fill=color)
+        d.text((text_pos_padding, 49), manacost, font=font, fill="#ffffff")
+        del d
+
+        # save the image in the ouput directory
+        savepath = out_root, 'manacost', 'items', filename
+        mktree(os.path.join(*savepath[:-1]))
+        manacost_img.save(os.path.join(*savepath))
+
+    # generate itemcost banner
+    if 'ItemCost' not in item or item['ItemCost'] == '0':
+        continue
+
+    image_src_file.seek(0)
+    itemcost_img = Image.open(image_src_file)
+
+    pad = 8 * len(item['ItemCost'])
+
+    d = ImageDraw.Draw(itemcost_img)
+    d.polygon([(84-pad, 50), (88, 50), (88, 64), (82-pad, 64)], fill=fill_gold)
+    d.text((86-pad, 49), item['ItemCost'], font=font, fill='#ffffff')
     del d
 
-    # save the image in the ouput directory
-    img.save(os.path.join(out_root, "items", filename))
-    img.close()
+    savepath = out_root, 'goldcost', 'items', filename
+    mktree(os.path.join(*savepath[:-1]))
+    itemcost_img.save(os.path.join(*savepath))
+
+    # generate combined version if needed
+    if manacost_img is not None:
+        manacost_img.paste(Image.new("RGBA", (124, 64), (0, 0, 0, 0)), (30, 0))
+        itemcost_img.paste(manacost_img, manacost_img)
+
+    savepath = out_root, 'combined', 'items', filename
+    mktree(os.path.join(*savepath[:-1]))
+    itemcost_img.save(os.path.join(*savepath))
 
 
 # add color coded damage type in the top right corner
@@ -153,9 +189,9 @@ for name in abilities:
         del d
 
         # save the image in the ouput directory
-        filepath = os.path.join(out_root, filepath.replace(vpk_img_root, ''))
+        filepath = os.path.split(os.path.join(out_root, filepath.replace(vpk_img_root+'/', '')))
         # recreate the relative path
-        mktree(os.path.join(*filepath.split('/')[:-1]))
+        mktree(os.path.join(*filepath[:-1]))
 
-        img.save(filepath)
+        img.save(os.path.join(*filepath))
         img.close()
