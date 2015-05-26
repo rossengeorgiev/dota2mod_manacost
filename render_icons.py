@@ -84,10 +84,6 @@ for item_name in items:
                     if "health_sacrifice" in xv:
                         manacost = xv['health_sacrifice']
                         raise Exception
-
-                # if manamanacost is 0, and item doesn't require health
-                # there is no point rendering an image for that item
-                continue
             except:
                 color = fill_green  # sacrifice health, health is green, we use green
 
@@ -103,22 +99,23 @@ for item_name in items:
 
                 manacost = manacosts[idx]
 
-        # center text in our little box
-        text_pos_padding = (3 - len(manacost)) * 4
+        if manacost != '0':
+            # center text in our little box
+            text_pos_padding = (3 - len(manacost)) * 4
 
-        # open the image
-        manacost_img = Image.open(image_src_file)
+            # open the image
+            manacost_img = Image.open(image_src_file)
 
-        # add info in the bottom left corner
-        d = ImageDraw.Draw(manacost_img)
-        d.polygon([(0, 50), (20, 50), (25, 64), (0, 64)], fill=color)
-        d.text((text_pos_padding, 49), manacost, font=font, fill="#ffffff")
-        del d
+            # add info in the bottom left corner
+            d = ImageDraw.Draw(manacost_img)
+            d.polygon([(0, 50), (20, 50), (25, 64), (0, 64)], fill=color)
+            d.text((text_pos_padding, 49), manacost, font=font, fill="#ffffff")
+            del d
 
-        # save the image in the ouput directory
-        savepath = out_root, 'manacost', 'items', filename
-        mktree(os.path.join(*savepath[:-1]))
-        manacost_img.save(os.path.join(*savepath))
+            # save the image in the ouput directory
+            savepath = out_root, 'manacost', 'items', filename
+            mktree(os.path.join(*savepath[:-1]))
+            manacost_img.save(os.path.join(*savepath))
 
     # generate itemcost banner
     if 'ItemCost' not in item or item['ItemCost'] == '0':
