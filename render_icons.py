@@ -45,6 +45,15 @@ with pak1.get_file("scripts/npc/items.txt") as vpkfile:
     vpkfile.save(os.path.join(src_root, 'items.txt'))
     items = vdf.load(vpkfile)['DOTAAbilities']
 
+# fix for wrong boots of travel item_cost
+(
+    items['item_travel_boots']['ItemCost'],
+    items['item_travel_boots_2']['ItemCost'],
+) = (
+    items['item_travel_boots_2']['ItemCost'],
+    items['item_travel_boots']['ItemCost'],
+)
+
 # find all items with mana or health requirements
 for item_name in items:
 
