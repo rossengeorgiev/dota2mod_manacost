@@ -10,7 +10,7 @@ import vdf
 import vpk
 
 # configs
-vpk_path = '/d/Steam/steamapps/common/dota 2 beta/dota/pak01_dir.vpk'
+vpk_path = '/d/Steam/steamapps/common/dota 2 beta/game/dota/pak01_dir.vpk'
 vpk_img_root = 'resource/flash3/images'
 fill_blue = "#1f496f"
 fill_green = "#26721b"

@@ -1,3 +1,10 @@
+# NOTICE
+
+Currently there is no way to run the mod in Dota 2 Reborn.
+The mod will be updated as soon as I find a way for it to work.
+If you know such a method, please do get in touch.
+
+
 ### Dota 2 mod — Mana cost for items
 ----
 [▶ Download latest version](https://github.com/rossengeorgiev/dota2mod_manacost/releases)

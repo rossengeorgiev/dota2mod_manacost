@@ -11214,14 +11214,14 @@
 			}
 			"04"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"675 675 675"
-			}			
-			"05"
-			{
 				"var_type"					"FIELD_FLOAT"
 				"duration_tooltip"			"2.4 4.2 6.0"
 			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"675 675 675"
+			}	
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
@@ -23822,28 +23822,28 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_move_speed"		"10 20 30 40"
-			}
-			"03"
-			{	
-				"var_type"				"FIELD_INTEGER"
-				"bonus_range"			"372"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"base_attack_time"		"1.55"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_hp"				"100"
 			}
-			"06"
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"10 20 30 40"
+			}
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"3"
 			}
+			"05"
+			{	
+				"var_type"				"FIELD_INTEGER"
+				"bonus_range"			"372"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"base_attack_time"		"1.55"
+			}			
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
@@ -28639,6 +28639,36 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"stash_pickup_distance"		"250"
+			}
+		}
+		
+		"MaxLevel"		"1"
+	}
+
+	//=================================================================================================================
+	// Ability: Courier's shortcut ability to take stash items if there are any, then transfer all to the hero
+	//=================================================================================================================
+	"courier_take_stash_and_transfer_items"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5676"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stash_pickup_distance"		"250"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"handoff_distance"		"400"
 			}
 		}
 		
@@ -33678,6 +33708,186 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// Arc Warden: Flux
+	//=================================================================================================================
+	"arc_warden_flux"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5677"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600 700 800 900"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"duration"						"6.0"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_per_second"				"15 30 45 60"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"search_radius"					"225"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"think_interval"				"1.0"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"move_speed_slow_pct"				"50"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Arc Warden: Magnetic Field
+	//=================================================================================================================
+	"arc_warden_magnetic_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5678"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"275"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"3.5 4.0 4.5 5.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed_bonus"		"50 60 70 80"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"evasion_chance"			"100"
+			}
+		}
+	}
+		
+	//=================================================================================================================
+	// Arc Warden: Spark Wraith
+	//=================================================================================================================
+	"arc_warden_spark_wraith"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5679"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		
+		"AbilityCastRange"				"2000"
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7.0 7.0 7.0 7.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"120 160 200 240"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 110 120 130"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"375"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"activation_delay"				"3.0"
+			}			
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"duration"						"50.0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wraith_speed"					"400"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"spark_damage"					"150 200 250 300"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"think_interval"				"0.2"
+			}
+		}
+	}
 }
 
 
@@ -33685,6 +33895,6 @@
 
 ////////////////////////
 ////////////////////////
-// Next Ability ID: 5676
+// Next Ability ID: 5681
 ////////////////////////
 ////////////////////////

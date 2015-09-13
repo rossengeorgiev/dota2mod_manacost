@@ -379,7 +379,7 @@
 		"AbilityCastRange"				"350"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"5.0"
-		"Model"							"models/props_gameplay/quelling_blade.mdl"
+		"Model"							"models/props_gameplay/quelling_blade.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -463,7 +463,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"182"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"Model"							"models/props_gameplay/stout_shield.mdl"
+		"Model"							"models/props_gameplay/stout_shield.vmdl"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -504,7 +504,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"246"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -661,7 +661,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"16"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"Model"							"models/props_gameplay/branch.mdl"
+		"Model"							"models/props_gameplay/branch.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1058,7 +1058,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"29"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"Model"							"models/props_gameplay/boots_of_speed.mdl"
+		"Model"							"models/props_gameplay/boots_of_speed.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1089,8 +1089,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"30"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"Model"							"models/props_gameplay/gem01.mdl"
-		"Effect"						"dropped_gem"
+		"Model"							"models/props_gameplay/gem01.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_gem.vpcf"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1200,7 +1200,7 @@
 		"ID"							"33"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
-		"Model"							"models/props_gameplay/cheese.mdl"		
+		"Model"							"models/props_gameplay/cheese.vmdl"		
 		"FightRecapLevel"				"2"
 		
 		// Stats	
@@ -1246,7 +1246,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"34"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"Model"							"models/props_gameplay/magic_wand.mdl"
+		"Model"							"models/props_gameplay/magic_wand.vmdl"
 		
 		// Stats	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1293,7 +1293,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"35"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1319,7 +1319,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"36"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"Model"							"models/props_gameplay/magic_wand.mdl"
+		"Model"							"models/props_gameplay/magic_wand.vmdl"
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -1418,7 +1418,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"Model"							"models/props_gameplay/clarity.mdl"		
+		"Model"							"models/props_gameplay/clarity.vmdl"		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"250"
@@ -1463,7 +1463,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"Model"							"models/props_gameplay/mango.mdl"
+		"Model"							"models/props_gameplay/mango.vmdl"
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"250"
@@ -1510,7 +1510,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"Model"							"models/props_gameplay/salve.mdl"
+		"Model"							"models/props_gameplay/salve.vmdl"
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -1553,8 +1553,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"40"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"Model"							"models/props_gameplay/dust.mdl"
-		"Effect"						"dropped_dust"
+		"Model"							"models/props_gameplay/dust.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_dust.vpcf"
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -1608,7 +1608,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"Model"							"models/props_gameplay/bottle_blue.mdl"
+		"Model"							"models/props_gameplay/bottle_blue.vmdl"
 		"FightRecapLevel"				"1"
 		
 		// Stats
@@ -1669,7 +1669,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
-		"Model"							"models/props_gameplay/observer_ward_bundle.mdl"
+		"Model"							"models/props_gameplay/observer_ward_bundle.vmdl"
 		
 		
 		// Stats
@@ -1733,7 +1733,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
-		"Model"							"models/props_gameplay/sentry_ward_bundle.mdl"
+		"Model"							"models/props_gameplay/sentry_ward_bundle.vmdl"
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -1795,7 +1795,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"217"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1911,8 +1911,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"44"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"Model"							"models/props_gameplay/tango.mdl"
-		"Effect"						"dropped_tango"
+		"Model"							"models/props_gameplay/tango.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_tango.vpcf"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
 
@@ -1968,8 +1968,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"241"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"Model"							"models/props_gameplay/tango.mdl"
-		"Effect"						"dropped_tango"
+		"Model"							"models/props_gameplay/tango.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_tango.vpcf"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
 
@@ -2054,7 +2054,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-		"Model"							"models/props_gameplay/tpscroll01.mdl"
+		"Model"							"models/props_gameplay/tpscroll01.vmdl"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -2107,7 +2107,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"47"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2132,7 +2132,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"219"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2245,7 +2245,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"49"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 	
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2665,7 +2665,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"62"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2732,7 +2732,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"64"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2813,7 +2813,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"66"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2882,7 +2882,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"68"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2948,7 +2948,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"70"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3227,7 +3227,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"78"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3324,7 +3324,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"80"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3439,7 +3439,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"85"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3610,7 +3610,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"89"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3727,7 +3727,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"91"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3851,7 +3851,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"93"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3916,7 +3916,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"95"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4009,7 +4009,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"97"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4099,7 +4099,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"99"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4182,7 +4182,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"101"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4257,7 +4257,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"103"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4279,7 +4279,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"197"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4301,7 +4301,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"198"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4323,7 +4323,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"199"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4345,7 +4345,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"200"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4710,7 +4710,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"105"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5180,7 +5180,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"109"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		"FightRecapLevel"				"2"
 		
 		// Item Info
@@ -5252,7 +5252,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"111"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5332,7 +5332,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"113"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5411,7 +5411,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"115"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5493,7 +5493,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"117"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"Model"							"models/props_gameplay/aegis.mdl"		
+		"Model"							"models/props_gameplay/aegis.vmdl"		
 		"FightRecapLevel"				"2"
 
 		// Item Info
@@ -5538,7 +5538,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"118"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5640,7 +5640,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"120"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5764,7 +5764,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"122"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5846,7 +5846,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"221"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5935,7 +5935,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"124"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6010,7 +6010,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"243"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6129,7 +6129,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"126"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		"FightRecapLevel"				"1"
 		
 		// Item Info
@@ -6364,7 +6364,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"133"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"Model"							"models/props_gameplay/divine_rapier.mdl"
+		"Model"							"models/props_gameplay/divine_rapier.vmdl"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6472,7 +6472,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"136"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6626,7 +6626,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"140"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6691,7 +6691,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"142"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6881,7 +6881,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"146"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		"FightRecapLevel"				"1"
 		
 		// Item Info
@@ -7034,7 +7034,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"148"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7098,7 +7098,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"150"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7515,7 +7515,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"155"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7605,7 +7605,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"157"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7824,7 +7824,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"161"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7992,7 +7992,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"165"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -8077,7 +8077,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"167"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -8205,7 +8205,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"171"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -8286,7 +8286,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"173"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -8642,7 +8642,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"177"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -8945,7 +8945,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"184"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9044,7 +9044,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"186"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9129,7 +9129,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"227"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9241,8 +9241,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"188"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"Model"							"models/props_gameplay/smoke.mdl"
-		"Effect"						"dropped_smoke"		
+		"Model"							"models/props_gameplay/smoke.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_smoke.vpcf"		
 		"FightRecapLevel"				"1"
 																																																																												 
 		// Stats		
@@ -9302,7 +9302,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"189"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9395,7 +9395,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"230"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
+		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10175,7 +10175,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY | DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-		"Model"							"models/props_gameplay/halloween_candy.mdl"
+		"Model"							"models/props_gameplay/halloween_candy.vmdl"
 		
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -10770,7 +10770,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"1009"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"Model"							"models/props_winter/present.mdl"
+		"Model"							"models/props_winter/present.vmdl"
 		
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
