@@ -1,10 +1,3 @@
-# NOTICE
-
-Currently there is no way to run the mod in Dota 2 Reborn.
-The mod will be updated as soon as I find a way for it to work.
-If you know such a method, please do get in touch.
-
-
 ### Dota 2 mod — Mana cost for items
 ----
 [▶ Download latest version](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
@@ -42,8 +35,8 @@ This way the icon set can quickly be regenerated in the case of a game patch.
 ## Installation
 
 1. Download the latest `mod_xxxxxxxx.zip` from the [release section](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
-2. Extract in `[steam folder]\steamapps\common\dota 2 beta\dota\resource\flash3\images`
-3. Add `-enable_addons` to Dota 2 launch options
+2. Extract in `[steam folder]\steamapps\common\dota 2 beta\game\dota_addons`
+3. Add `-enable_addons -addon client_mods` to Dota 2 launch options
 
 ## Building
 

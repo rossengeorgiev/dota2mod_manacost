@@ -19,6 +19,7 @@ font = ImageFont.truetype('Exo-SemiBold.ttf', 13)
 src_root = "./src/"
 src_preimages_root = "./prerendered_items/"
 out_root = "./out/"
+out_mod_dirname = "client_mods"
 
 
 # helper functions
@@ -32,13 +33,9 @@ def mktree(path):
 # clear output directory
 if os.path.exists("./out"):
     shutil.rmtree("./out")
-mktree("./out/manacost/items")
-mktree("./out/goldcost/items")
-mktree("./out/combined/items")
-mktree("./out/spellicons")
 
 # load game asset index
-pak1 = vpk.VPK(vpk_path)
+pak1 = vpk.open(vpk_path)
 
 # load items.txt schema and save a local copy to track in repo
 with pak1.get_file("scripts/npc/items.txt") as vpkfile:
@@ -122,7 +119,7 @@ for item_name in items:
             del d
 
             # save the image in the ouput directory
-            savepath = out_root, 'manacost', 'items', filename
+            savepath = out_root, 'manacost', out_mod_dirname, vpk_img_root, 'items', filename
             mktree(os.path.join(*savepath[:-1]))
             manacost_img.save(os.path.join(*savepath))
 
@@ -140,7 +137,7 @@ for item_name in items:
     d.text((86-pad, 49), item['ItemCost'], font=font, fill='#ffffff')
     del d
 
-    savepath = out_root, 'goldcost', 'items', filename
+    savepath = out_root, 'goldcost', out_mod_dirname, vpk_img_root, 'items', filename
     mktree(os.path.join(*savepath[:-1]))
     itemcost_img.save(os.path.join(*savepath))
 
@@ -149,7 +146,7 @@ for item_name in items:
         manacost_img.paste(Image.new("RGBA", (124, 64), (0, 0, 0, 0)), (30, 0))
         itemcost_img.paste(manacost_img, manacost_img)
 
-    savepath = out_root, 'combined', 'items', filename
+    savepath = out_root, 'combined',out_mod_dirname, vpk_img_root, 'items', filename
     mktree(os.path.join(*savepath[:-1]))
     itemcost_img.save(os.path.join(*savepath))
 
@@ -195,7 +192,7 @@ for name in abilities:
         del d
 
         # save the image in the ouput directory
-        filepath = os.path.split(os.path.join(out_root, filepath.replace(vpk_img_root+'/', '')))
+        filepath = os.path.split(os.path.join(out_root, 'damagetype', out_mod_dirname, filepath))
         # recreate the relative path
         mktree(os.path.join(*filepath[:-1]))
 
