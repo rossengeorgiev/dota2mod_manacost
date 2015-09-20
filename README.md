@@ -1,3 +1,9 @@
+# NOTICE
+
+The current method for installing client side mods has been disabled in a recent patch.
+This page will be updated once a new method is available.
+
+
 ### Dota 2 mod — Mana cost for items
 ----
 [▶ Download latest version](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
