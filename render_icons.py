@@ -4,6 +4,10 @@ import os
 import errno
 import fnmatch
 import shutil
+import logging
+
+logging.basicConfig(format='[%(asctime)s] %(levelname)s %(name)s: %(message)s', level=logging.INFO)
+LOG = logging.getLogger()
 
 from PIL import Image, ImageFont, ImageDraw
 import vdf
@@ -34,13 +38,19 @@ def mktree(path):
 if os.path.exists("./out"):
     shutil.rmtree("./out")
 
+LOG.info("Reading VPK from %s" % repr(vpk_path))
+
 # load game asset index
 pak1 = vpk.open(vpk_path)
+
+LOG.info("Reading items.txt")
 
 # load items.txt schema and save a local copy to track in repo
 with pak1.get_file("scripts/npc/items.txt") as vpkfile:
     vpkfile.save(os.path.join(src_root, 'items.txt'))
     items = vdf.load(vpkfile)['DOTAAbilities']
+
+LOG.info("Applying hotfix for BOTs item cost")
 
 # fix for wrong boots of travel item_cost
 (
@@ -51,6 +61,7 @@ with pak1.get_file("scripts/npc/items.txt") as vpkfile:
     items['item_travel_boots']['ItemCost'],
 )
 
+LOG.info("Generating images for %d items" % len(items))
 # find all items with mana or health requirements
 for item_name in items:
 
@@ -162,6 +173,7 @@ dmg_type_color = {
     "DAMAGE_TYPE_PURE": "#DF00FF",
 }
 
+LOG.info("Reading npc_abilities.txt")
 # load npc_abilities.txt schema and save a local copy to track in repo
 with pak1.get_file("scripts/npc/npc_abilities.txt") as vpkfile:
     vpkfile.save(os.path.join(src_root, 'npc_abilities.txt'))
@@ -169,6 +181,7 @@ with pak1.get_file("scripts/npc/npc_abilities.txt") as vpkfile:
 
 src_files = [path for path in pak1 if path.startswith("resource/flash3/images/spellicons/")]
 
+LOG.info("Generating images for %d abilities" % len(abilities))
 for name in abilities:
 
     if type(abilities[name]) is not dict:
@@ -198,3 +211,5 @@ for name in abilities:
 
         img.save(os.path.join(*filepath))
         img.close()
+
+LOG.info("Done")
