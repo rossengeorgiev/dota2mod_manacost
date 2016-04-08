@@ -23,16 +23,17 @@ font = ImageFont.truetype('Exo-SemiBold.ttf', 13)
 src_root = "./src/"
 src_preimages_root = "./prerendered_items/"
 out_root = "./out/"
-out_mod_dirname = "client_mods"
 
 
 # helper functions
 def mktree(path):
+    dirpath = os.path.join(*os.path.split(path)[:-1])
     try:
-        os.makedirs(path)
+        os.makedirs(dirpath)
     except OSError as exc:
-        if exc.errno == errno.EEXIST and os.path.isdir(path):
+        if exc.errno == errno.EEXIST and os.path.isdir(dirpath):
             pass
+    return path
 
 # clear output directory
 if os.path.exists("./out"):
@@ -119,9 +120,8 @@ for item_name in items:
             del d
 
             # save the image in the ouput directory
-            savepath = out_root, 'manacost', out_mod_dirname, vpk_img_root, 'items', filename
-            mktree(os.path.join(*savepath[:-1]))
-            manacost_img.save(os.path.join(*savepath))
+            savepath = os.path.join(out_root, 'manacost', vpk_img_root, 'items', filename)
+            manacost_img.save(mktree(savepath))
 
     # generate itemcost banner
     if 'ItemCost' not in item or item['ItemCost'] == '0':
@@ -137,18 +137,16 @@ for item_name in items:
     d.text((86-pad, 49), item['ItemCost'], font=font, fill='#ffffff')
     del d
 
-    savepath = out_root, 'goldcost', out_mod_dirname, vpk_img_root, 'items', filename
-    mktree(os.path.join(*savepath[:-1]))
-    itemcost_img.save(os.path.join(*savepath))
+    savepath = os.path.join(out_root, 'goldcost', vpk_img_root, 'items', filename)
+    itemcost_img.save(mktree(savepath))
 
     # generate combined version if needed
     if manacost_img is not None:
         manacost_img.paste(Image.new("RGBA", (124, 64), (0, 0, 0, 0)), (30, 0))
         itemcost_img.paste(manacost_img, manacost_img)
 
-    savepath = out_root, 'combined',out_mod_dirname, vpk_img_root, 'items', filename
-    mktree(os.path.join(*savepath[:-1]))
-    itemcost_img.save(os.path.join(*savepath))
+    savepath = os.path.join(out_root, 'combined', vpk_img_root, 'items', filename)
+    itemcost_img.save(mktree(savepath))
 
 
 # add color coded damage type in the top right corner
@@ -194,11 +192,17 @@ for name in abilities:
         del d
 
         # save the image in the ouput directory
-        filepath = os.path.split(os.path.join(out_root, 'damagetype', out_mod_dirname, filepath))
-        # recreate the relative path
-        mktree(os.path.join(*filepath[:-1]))
-
-        img.save(os.path.join(*filepath))
+        filepath = mktree(os.path.join(out_root, 'damagetype', filepath))
+        img.save(filepath)
         img.close()
+
+LOG.info("Generating VPKs")
+
+# create VPKs
+vpk.new(os.path.join(out_root, 'manacost')).save(mktree(os.path.join(out_root, 'costmod_manacost', 'pak01_dir.vpk')))
+vpk.new(os.path.join(out_root, 'goldcost')).save(mktree(os.path.join(out_root, 'costmod_goldcost', 'pak01_dir.vpk')))
+vpk.new(os.path.join(out_root, 'combined')).save(mktree(os.path.join(out_root, 'costmod_combined', 'pak01_dir.vpk')))
+vpk.new(os.path.join(out_root, 'damagetype')).save(mktree(os.path.join(out_root, 'costmod_damagetype', 'pak01_dir.vpk')))
+
 
 LOG.info("Done")

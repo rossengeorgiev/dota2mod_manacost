@@ -9,18 +9,10 @@ echo -e "\nMake a zip file..."
 cd ./out/
 rm -f *.zip
 
-pushd manacost
-zip -r -9 ../mod_item_manacost.zip .
-popd
-pushd goldcost
-zip -r -9 ../mod_item_goldcost.zip .
-popd
-pushd combined
-zip -r -9 ../mod_item_combined.zip .
-popd
-pushd damagetype
-zip -r -9 ../mod_spellicons.zip .
-popd
+zip -r -9 mod_manacost.zip costmod_manacost
+zip -r -9 mod_goldcost.zip costmod_goldcost
+zip -r -9 mod_combined.zip costmod_combined
+zip -r -9 mod_damagetype.zip costmod_damagetype
 
 echo -e "\nMake showcase images.."
 

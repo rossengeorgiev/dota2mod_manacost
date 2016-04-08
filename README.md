@@ -1,9 +1,3 @@
-# NOTICE
-
-The current method for installing client side mods has been disabled in a recent patch.
-This page will be updated once a new method is available.
-
-
 ### Dota 2 mod — Mana cost for items
 ----
 [▶ Download latest version](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
@@ -41,8 +35,10 @@ This way the icon set can quickly be regenerated in the case of a game patch.
 ## Installation
 
 1. Download the latest `mod_xxxxxxxx.zip` from the [release section](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
-2. Extract in `[steam folder]\steamapps\common\dota 2 beta\game\dota_addons`
-3. Add `-enable_addons -addon client_mods` to Dota 2 launch options
+2. Extract in `[steam folder]\steamapps\common\dota 2 beta\game\`
+3. Edit `[dota 2 beta dir]\game\dota\gameinfo.gi` and add `Game costmod_xxxxxxx` in the `SearchPaths` section
+
+![Editting gameinfo.gi](gameinfo_edit.png "Editting gameinfo.gi")
 
 ## Building
 
