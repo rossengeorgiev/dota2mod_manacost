@@ -38,9 +38,11 @@ This way the icon set can quickly be regenerated in the case of a game patch.
 2. Extract in `[steam folder]\steamapps\common\dota 2 beta\game\`
 3. Edit `[dota 2 beta dir]\game\dota\gameinfo.gi` and add `Game costmod_xxxxxxx` in the `SearchPaths` section
 
-![Editting gameinfo.gi](gameinfo_edit.png "Editting gameinfo.gi")
+![Editing gameinfo.gi](gameinfo_edit.png "Editing gameinfo.gi")
 
 ## Building
+
+All code in this repo assumes that the environment is either `Linux` or `cygwin`.
 
 ### Required tools
 * Python & pip
