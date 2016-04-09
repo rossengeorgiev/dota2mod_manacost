@@ -1,3 +1,8 @@
+# ! WARNING !
+
+While the current method works, it has not be allowed explicitly.
+Therefore it's not VAC-safe. Use at your own risk.
+
 ### Dota 2 mod — Mana cost for items
 ----
 [▶ Download latest version](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
