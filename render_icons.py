@@ -51,6 +51,16 @@ with pak1.get_file("scripts/npc/items.txt") as vpkfile:
     vpkfile.save(os.path.join(src_root, 'items.txt'))
     items = vdf.load(vpkfile)['DOTAAbilities']
 
+pt_names = ['power_treads_str.png', 'power_treads_agi.png', 'power_treads_int.png']
+
+def get_file(filename):
+    prerendered_path = os.path.join(src_preimages_root, filename)
+
+    if os.path.exists(prerendered_path):
+        return open(prerendered_path, 'rb')
+    else:
+        return pak1.get_file('/'.join([vpk_img_root, "items", filename]))
+
 LOG.info("Generating images for %d items" % len(items))
 # find all items with mana or health requirements
 for item_name in items:
@@ -66,13 +76,13 @@ for item_name in items:
     if filename.startswith("recipe_"):
         continue
 
-    # first we check for an available prerendered src image, and fallback to the ones from Dota 2
-    image_src_path = os.path.join(src_preimages_root, filename)
+    # it done like so to handle power treads special case
+    filenames = [filename]
 
-    if os.path.exists(image_src_path):
-        image_src_file = open(image_src_path, 'rb')
-    else:
-        image_src_file = pak1.get_file('/'.join([vpk_img_root, "items", filename]))
+    if filename == 'power_treads.png':
+        filenames += pt_names
+
+    image_src_files = map(get_file, filenames)
 
     manacost_img = None
     color = fill_blue
@@ -111,42 +121,45 @@ for item_name in items:
             text_pos_padding = (3 - len(manacost)) * 4
 
             # open the image
-            manacost_img = Image.open(image_src_file)
 
-            # add info in the bottom left corner
-            d = ImageDraw.Draw(manacost_img)
-            d.polygon([(0, 50), (20, 50), (25, 64), (0, 64)], fill=color)
-            d.text((text_pos_padding, 49), manacost, font=font, fill="#ffffff")
-            del d
+            for filename, image_src_file in zip(filenames, image_src_files):
+                manacost_img = Image.open(image_src_file)
 
-            # save the image in the ouput directory
-            savepath = os.path.join(out_root, 'manacost', vpk_img_root, 'items', filename)
-            manacost_img.save(mktree(savepath))
+                # add info in the bottom left corner
+                d = ImageDraw.Draw(manacost_img)
+                d.polygon([(0, 50), (20, 50), (25, 64), (0, 64)], fill=color)
+                d.text((text_pos_padding, 49), manacost, font=font, fill="#ffffff")
+                del d
+
+                # save the image in the ouput directory
+                savepath = os.path.join(out_root, 'manacost', vpk_img_root, 'items', filename)
+                manacost_img.save(mktree(savepath))
 
     # generate itemcost banner
     if 'ItemCost' not in item or item['ItemCost'] == '0':
         continue
 
-    image_src_file.seek(0)
-    itemcost_img = Image.open(image_src_file)
+    for filename, image_src_file in zip(filenames, image_src_files):
+        image_src_file.seek(0)
+        itemcost_img = Image.open(image_src_file)
 
-    pad = 8 * len(item['ItemCost'])
+        pad = 8 * len(item['ItemCost'])
 
-    d = ImageDraw.Draw(itemcost_img)
-    d.polygon([(84-pad, 50), (88, 50), (88, 64), (82-pad, 64)], fill=fill_gold)
-    d.text((86-pad, 49), item['ItemCost'], font=font, fill='#ffffff')
-    del d
+        d = ImageDraw.Draw(itemcost_img)
+        d.polygon([(84-pad, 50), (88, 50), (88, 64), (82-pad, 64)], fill=fill_gold)
+        d.text((86-pad, 49), item['ItemCost'], font=font, fill='#ffffff')
+        del d
 
-    savepath = os.path.join(out_root, 'goldcost', vpk_img_root, 'items', filename)
-    itemcost_img.save(mktree(savepath))
+        savepath = os.path.join(out_root, 'goldcost', vpk_img_root, 'items', filename)
+        itemcost_img.save(mktree(savepath))
 
-    # generate combined version if needed
-    if manacost_img is not None:
-        manacost_img.paste(Image.new("RGBA", (124, 64), (0, 0, 0, 0)), (30, 0))
-        itemcost_img.paste(manacost_img, manacost_img)
+        # generate combined version if needed
+        if manacost_img is not None:
+            manacost_img.paste(Image.new("RGBA", (124, 64), (0, 0, 0, 0)), (30, 0))
+            itemcost_img.paste(manacost_img, manacost_img)
 
-    savepath = os.path.join(out_root, 'combined', vpk_img_root, 'items', filename)
-    itemcost_img.save(mktree(savepath))
+        savepath = os.path.join(out_root, 'combined', vpk_img_root, 'items', filename)
+        itemcost_img.save(mktree(savepath))
 
 
 # add color coded damage type in the top right corner

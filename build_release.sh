@@ -2,7 +2,8 @@
 
 echo -e "\nAdding untouched prerendered images..."
 
-cp -vn ./prerendered_items/* ./out/items/
+cp -vn ./prerendered_items/* ./out/goldcost/resource/flash3/images/items/
+cp -vn ./prerendered_items/* ./out/manacost/resource/flash3/images/items/
 
 echo -e "\nMake a zip file..."
 
@@ -17,7 +18,7 @@ zip -r -9 mod_damagetype.zip costmod_damagetype
 echo -e "\nMake showcase images.."
 
 pushd ./manacost
-find . -type f > ../filelist.txt
+find . -type f | sort -R | head -30 > ../filelist.txt
 montage -crop 88x64+0+0 -resize 75% @../filelist.txt -tile 10 -shadow -geometry "+3+2" -monitor - | convert - -monitor -crop 722x+0+0 ../../showcase_items_manacost.png
 popd
 
