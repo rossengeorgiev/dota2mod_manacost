@@ -1,7 +1,7 @@
 # ! WARNING !
 
 While the current method works, it has not been allowed explicitly.
-Therefore it is not VAC-safe. Use at your own risk.
+It's unlikely that you will get VAC, but there are no guarantees. Use at your own risk.
 
 ### Dota 2 mod — Mana cost for items
 ----
