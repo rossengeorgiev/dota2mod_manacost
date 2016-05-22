@@ -560,12 +560,11 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"225"
+		"ItemCost"						"235"
 		"ItemShopTags"					"armor"
 		"ItemQuality"					"component"
 		"ItemAliases"					"wind lace"
 		"ItemPermanent"					"1"
-		"SideShop"						"1"
 		//"ItemInitialCharges"			"3"
 		//"ItemRequiresCharges"			"1"
 
@@ -4643,7 +4642,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"175"
-		"ItemCost"						"2725"
+		"ItemCost"						"2735"
 		"ItemShopTags"					"int;regen_mana;move_speed;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"cyclone euls;eul's scepter of divinity"
@@ -6841,7 +6840,7 @@
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"13.0"
+		"AbilityCooldown"				"18.0"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7944,17 +7943,17 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"unholy_bonus_armor"	"5"
+				"unholy_bonus_armor"	"4"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"unholy_health_drain_per_tick"	"4"
+				"unholy_health_drain_per_tick"	"5"
 			}		
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"unholy_health_drain_per_second_tooltip"	"40"
+				"unholy_health_drain_per_second_tooltip"	"45"
 			}	
 			"11"
 			{
@@ -8061,7 +8060,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
+		"ItemCost"						"300"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -8094,7 +8093,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"75"
-		"ItemCost"						"4800"
+		"ItemCost"						"5100"
 		"ItemShopTags"					"damage;attack_speed;movespeed;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"sb;invis;shadow blade"
@@ -9803,7 +9802,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1775"
+		"ItemCost"						"1785"
 		"ItemShopTags"					"str;agi;int;damage;move_speed;attack_speed;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"drum of endurance"
@@ -12306,6 +12305,292 @@
 		{
 		}
 	}
+	//=================================================================================================================
+	// RiverPainter
+	//=================================================================================================================
+	"item_river_painter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1021"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemQuality"					"component"
+		"ItemAliases"					"paint"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStackable"					"1"
+		"ItemStockTime"					"900.0"
+		"AssociatedConsumable"			"17022"
+		"EventID"						"14"
+		"PlayerSpecificCooldown"		"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"paint_duration"		"900.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// RiverPainter2
+	//=================================================================================================================
+	"item_river_painter2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1022"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemQuality"					"component"
+		"ItemAliases"					"paint"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStackable"					"1"
+		"ItemStockTime"					"900.0"
+		"AssociatedConsumable"			"17023"
+		"EventID"						"14"
+		"PlayerSpecificCooldown"		"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"paint_duration"		"900.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// RiverPainter3
+	//=================================================================================================================
+	"item_river_painter3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1023"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemQuality"					"component"
+		"ItemAliases"					"paint"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStackable"					"1"
+		"ItemStockTime"					"900.0"
+		"AssociatedConsumable"			"17024"
+		"EventID"						"14"
+		"PlayerSpecificCooldown"		"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"paint_duration"		"900.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// RiverPainter4
+	//=================================================================================================================
+	"item_river_painter4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1024"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemQuality"					"component"
+		"ItemAliases"					"paint"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStackable"					"1"
+		"ItemStockTime"					"900.0"
+		"AssociatedConsumable"			"17025"
+		"EventID"						"14"
+		"PlayerSpecificCooldown"		"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"paint_duration"		"900.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// RiverPainter5
+	//=================================================================================================================
+	"item_river_painter5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1025"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemQuality"					"component"
+		"ItemAliases"					"paint"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStackable"					"1"
+		"ItemStockTime"					"900.0"
+		"AssociatedConsumable"			"17026"
+		"EventID"						"14"
+		"PlayerSpecificCooldown"		"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"paint_duration"		"900.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// RiverPainter6
+	//=================================================================================================================
+	"item_river_painter6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1026"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemQuality"					"component"
+		"ItemAliases"					"paint"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStackable"					"1"
+		"ItemStockTime"					"900.0"
+		"AssociatedConsumable"			"17027"
+		"EventID"						"14"
+		"PlayerSpecificCooldown"		"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"paint_duration"		"900.0"
+			}
+		}
+	}
+	// next free ID: 268
+	//=================================================================================================================
+	// RiverPainter7
+	//=================================================================================================================
+	"item_river_painter7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1027"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemQuality"					"component"
+		"ItemAliases"					"paint"
+		"ItemStockMax"					"1"
+		"ItemStockInitial"				"1"
+		"ItemStackable"					"1"
+		"ItemStockTime"					"900.0"
+		"AssociatedConsumable"			"17047"
+		"EventID"						"14"
+		"PlayerSpecificCooldown"		"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"paint_duration"		"900.0"
+			}
+		}
+	}
 	// next free ID: 268
 }
-
