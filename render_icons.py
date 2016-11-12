@@ -155,8 +155,7 @@ for item_name in items:
 
         # generate combined version if needed
         if manacost_img is not None:
-            manacost_img.paste(Image.new("RGBA", (124, 64), (0, 0, 0, 0)), (30, 0))
-            itemcost_img.paste(manacost_img, manacost_img)
+            itemcost_img.paste(manacost_img.crop((0, 0, 30, 64)), box=(0, 0, 30, 64))
 
         savepath = os.path.join(out_root, 'combined', vpk_img_root, 'items', filename)
         itemcost_img.save(mktree(savepath))
