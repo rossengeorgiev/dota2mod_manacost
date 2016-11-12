@@ -3,6 +3,8 @@
 While the current method works, note that it has not been allowed explicitly.
 It's unlikely that you will get VAC'd, but there are no guarantees. Use at your own risk.
 
+Guide won't work when using the mod. No workaround available at the moment.
+
 ### Dota 2 mod — Mana cost for items
 ----
 [▶ Download latest version](https://github.com/rossengeorgiev/dota2mod_manacost/releases)
