@@ -1,3 +1,11 @@
+# Dota 7.00
+
+The New Journey patch has landed and with it mana cost display for items.
+This spells the end for this project.
+I would like to thank everyone who used mod and best of luck in your games.
+
+----
+
 # ! NOTICE !
 
 While the current method works, note that it has not been allowed explicitly.
